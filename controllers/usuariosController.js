@@ -194,9 +194,11 @@ const actualizarUAdmin = async(req, res = response) => {
 const actualizarUsuario = async(req, res = response) => {
     //todo: validar token y comprobar si el usuario es correcto
 
-    // modificado por José Prados
-    const uid = req.body._id;
+    // const uid = req.body._id;
     // const uid = req.params.id;
+
+    const id = req.params.id;
+    const uid = req.uid;
 
     try {
         const usuarioDB = await Usuario.findById(uid);
@@ -208,7 +210,8 @@ const actualizarUsuario = async(req, res = response) => {
         }
 
         //actualizaciones
-        // const { password, google, email, ...campos } = req.body;
+        // const { password, google, ...campos } = req.body;
+        
         const data = {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
@@ -217,8 +220,19 @@ const actualizarUsuario = async(req, res = response) => {
             telefono: req.body.telefono,
             numdoc: req.body.numdoc,
             email: req.body.email,
-            google: req.body.google
+            google: req.body.google,
+            facebook: req.body.facebook,
+            twitter: req.body.twitter,
+            genero: req.body.genero,
+            pais: req.body.pais,
+            lang: req.body.lang,
+            edad: req.body.edad,
+            preferencia_distancia: req.body.preferencia_distancia,
+            preferencia_edad: req.body.preferencia_edad,
+            preferencia_lang: req.body.preferencia_lang,
+            preferencia_sexo: req.body.preferencia_sexo,
         }
+
         // si en el req viene una password se agrega al objeto data para realizar el update
         if(req.body.password){
             data.password = req.body.password;

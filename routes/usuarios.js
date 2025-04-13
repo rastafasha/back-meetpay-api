@@ -29,7 +29,7 @@ const {
 } = require('../middlewares/validar-jwt');
 
 router.get('/', 
-    // validarJWT, 
+    validarJWT, 
     getUsuarios);
 router.get('/all/', 
     validarJWT, 
@@ -59,7 +59,7 @@ router.put('/update/:id', [
     validarJWT,
     check('first_name', 'el nombre es obligatorio').not().isEmpty(),
     check('email', 'el email es obligatorio').isEmail(),
-    check('role', 'el role es obligatorio').not().isEmpty(),
+    // check('role', 'el role es obligatorio').not().isEmpty(),
     validarCampos
 ], actualizarUsuario);
 
@@ -80,7 +80,10 @@ router.put('/update/statusrole/:id', [
 
 router.delete('/:id', [validarJWT, validarAdminRole], borrarUsuario);
 
-router.get('/:id', [validarJWT], getUsuario);
+router.get('/:id', 
+    // [validarJWT],
+     getUsuario);
+     
 router.get('/numdoc/:numdoc', [validarJWT], getUsuariobyCedula);
 
 
