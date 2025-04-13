@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 var PreferenciasSchema = Schema({
     gustos: { type: Array },
     quiero: { type: Array },
-    distancia: { type: String },
-    genero: { type: String },
+    distancia: { type: Number },
+    genero: { type: Number },
     lang: { type: String },
     edad: { type: Number },
     latitude: { type: Number },

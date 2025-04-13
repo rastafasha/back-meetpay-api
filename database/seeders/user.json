@@ -1,0 +1,27 @@
+{
+    "_id": {
+      "$oid": "67fc2906fee489ce7a70c604"
+    },
+    "first_name": "Malcolm",
+    "last_name": "Cordova",
+    "email": "mercadocreativo@gmail.com",
+    "role": "USER",
+    "google": true,
+    "facebook": true,
+    "twitter": false,
+    "terminos": false,
+    "want_kids": false,
+    "smoke": false,
+    "alcohol": false,
+    "img": "default.png",
+    "password": "$2a$10$uPtXnnHJnEFLtBNlTeh5G.zPqa9vegZLpWtEpBsXxe8TKASu5k1c.",
+    "__v": 0,
+    "edad": 45,
+    "genero": "2",
+    "lang": "es",
+    "latitude": 10.498306269999997,
+    "longitude": -66.90258025999998,
+    "numdoc": "1234567",
+    "pais": "VE",
+    "telefono": "+584241874370"
+  }

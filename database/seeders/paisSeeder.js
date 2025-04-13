@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
 require('dotenv').config();
 const Pais = require('../../models/pais');
 
+const mongoURI = 'mongodb+srv://mean_user:elaSqidX5XGon7XI@cluster0.9kln7.mongodb.net/meetpay'; 
 // Configure mongoose connection
 async function connectDB() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
+    // await mongoose.connect(process.env.MONGODB_URI, {
+    await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       serverSelectionTimeoutMS: 5000

@@ -26,14 +26,9 @@ const UsuarioSchema = Schema({
     longitude: { type: Number },
     description:{type:String},
     ocupacion:{type:String},
-    want_kids:{type:String},
-    smoke:{type:String},
-    drink:{type:String},
-
-    // preferencia_distancia: { type: String },
-    // preferencia_sexo: { type: String },
-    // preferencia_lang: { type: String },
-    // preferencia_edad: { type: Number },
+    want_kids:{type:Boolean},
+    smoke:{type:Boolean},
+    alcohol:{type:Boolean}
 });
 
 UsuarioSchema.method('toJSON', function() { // modificar el _id a uid, esconde el password
