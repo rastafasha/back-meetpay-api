@@ -22,6 +22,8 @@ const UsuarioSchema = Schema({
     pais: { type: String },
     ciudad: { type: String },
     direccion: { type: String },
+    latitude: { type: Number },
+    longitude: { type: Number },
     description:{type:String},
     ocupacion:{type:String},
     want_kids:{type:String},

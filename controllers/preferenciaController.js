@@ -48,12 +48,14 @@ const crearPreferencia = async(req, res) => {
     try {
         const preferencia = new Preferencia({
             user: uid,
-            gustos: req.body.gustos || '',
-            quiero: req.body.quiero || '', 
-            genero: req.body.genero || req.body.genero || '',
+            gustos: Array.isArray(req.body.gustos) ? req.body.gustos : [],
+            quiero: Array.isArray(req.body.quiero) ? req.body.quiero : [],
+            genero: req.body.genero || '',
             lang: req.body.lang || '',
             edad: req.body.edad || null,
-            distancia: req.body.distancia || ''
+            distancia: req.body.distancia || '',
+            latitude: req.body.latitude || preferencia.latitude,
+            longitude: req.body.longitude || preferencia.longitude,
         });
 
         const preferenciaDB = await preferencia.save();
@@ -96,6 +98,8 @@ const actualizarPreferenciabyuser = async(req, res) => {
             lang: req.body.lang || preferencia.lang,
             edad: req.body.edad || preferencia.edad,
             distancia: req.body.distancia || preferencia.distancia,
+            latitude: req.body.latitude || preferencia.latitude,
+            longitude: req.body.longitude || preferencia.longitude,
             user: uid
         };
 
