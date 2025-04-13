@@ -227,10 +227,6 @@ const actualizarUsuario = async(req, res = response) => {
             pais: req.body.pais,
             lang: req.body.lang,
             edad: req.body.edad,
-            preferencia_distancia: req.body.preferencia_distancia,
-            preferencia_edad: req.body.preferencia_edad,
-            preferencia_lang: req.body.preferencia_lang,
-            preferencia_sexo: req.body.preferencia_sexo,
         }
 
         // si en el req viene una password se agrega al objeto data para realizar el update
