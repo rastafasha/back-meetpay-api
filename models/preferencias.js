@@ -5,7 +5,7 @@ var PreferenciasSchema = Schema({
     gustos: { type: Array },
     quiero: { type: Array },
     distancia: { type: Number },
-    genero: { type: Number },
+    genero: { type: String },
     lang: { type: String },
     edad: { type: Number },
     latitude: { type: Number },
