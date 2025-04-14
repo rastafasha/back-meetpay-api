@@ -108,6 +108,7 @@ app.use('/api/auth/login', require('./routes/auth'));
 app.use('/api/todo', require('./routes/busquedas'));
 app.use('/api/uploads', require('./routes/uploads'));
 app.use('/api/preferencias', require('./routes/preferencias'));
+app.use('/api/usercontact', require('./routes/usercontact'));
 // app.use('/api/paises', require('./routes/pais'));
 
 //tienda

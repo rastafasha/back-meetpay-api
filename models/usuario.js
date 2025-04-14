@@ -25,7 +25,7 @@ const UsuarioSchema = Schema({
     latitude: { type: Number },
     longitude: { type: Number },
     descripcion:{type:String},
-    ocupacion:{type:String},
+    profesion:{type:String},
     want_kids:{type:Boolean},
     smoke:{type:Boolean},
     alcohol:{type:Boolean}
