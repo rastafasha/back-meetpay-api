@@ -32,7 +32,7 @@ router.get('/',
     validarJWT, 
     getUsuarios);
 router.get('/all/', 
-    validarJWT, 
+    // validarJWT, 
     getAllUsers);
 
 router.get('/user_token/set/:email', set_token_recovery);

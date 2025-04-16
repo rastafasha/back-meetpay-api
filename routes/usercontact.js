@@ -25,7 +25,7 @@ router.put('/update/:id', [
     validarCampos
 ], actualizarContacto);
 
-router.delete('/remove/:id', borrarContacto);
+router.delete('/delete/:id', borrarContacto);
 
 router.get('/user/:id', listarPorUsuario);
 

@@ -28,7 +28,8 @@ const getUsuarios = async(req, res) => {
 
 const getAllUsers = async(req, res) => {
 
-    const allusuarios = await Usuario.find().populate('first_name email role google img ');
+    const allusuarios = await Usuario.find();
+    // .populate('first_name img ');
 
     res.json({
         ok: true,
